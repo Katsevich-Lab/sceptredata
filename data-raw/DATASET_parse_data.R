@@ -12,8 +12,12 @@ process_matrix_and_ids <- function(mat_fp, id_fp, gene = TRUE) {
   dt <- dt |> dplyr::filter(cell_idx %in% seq(1, n_cells))
 
   if (gene) {
+    feature_idxs_to_select <- dt |>
+      dplyr::group_by(cell_idx) |>
+      dplyr::summarize(feature_idx = feature_idx[1]) |>
+      dplyr::pull(feature_idx) |> unique()
     mt_gene_idxs <- grep(pattern = "^MT-", x = feature_df$gene_name)
-    rows_to_keep <- c(sample(x = seq(1L, nrow(feature_df)), size = 245), sample(mt_gene_idxs, 5)) |> sort()
+    rows_to_keep <- c(feature_idxs_to_select, sample(mt_gene_idxs, 5)) |> unique() |> sort()
     feature_df <- feature_df[rows_to_keep,]
     dt <- dt |> dplyr::filter(feature_idx %in% rows_to_keep)
     old_to_new_feature_map <- data.frame(feature_idx = rows_to_keep,
