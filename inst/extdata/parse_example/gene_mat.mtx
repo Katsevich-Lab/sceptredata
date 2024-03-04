@@ -1,5 +1,6 @@
 %%MatrixMarket matrix coordinate integer general
 %Rows=cells (5000), Cols=genes (250)
+5000 250 11029
 1 89 6
 1 103 1
 1 250 2

@@ -35,7 +35,7 @@ process_matrix_and_ids <- function(mat_fp, id_fp, gene = TRUE) {
 
   # write to directory
   writeLines(comments, con = file_path_gene_mtx)
-  write.table(x = dt, file = file_path_gene_mtx, append = TRUE, row.names = FALSE, col.names = FALSE)
+  write.table(x = dt_with_header, file = file_path_gene_mtx, append = TRUE, row.names = FALSE, col.names = FALSE)
   rownames(feature_df) <- NULL
   write.csv(x = feature_df, file = file_path_all_genes, row.names = FALSE)
 }
