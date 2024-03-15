@@ -1,12 +1,26 @@
 Package: sceptredata
 Title: Example data for the `sceptre` and `ondisc` packages
-Version: 0.0.1
+Version: 0.9.0
 Authors@R: 
-    person("Timothy", "Barry", , "tbarry@hsph.harvard.edu", role = c("aut", "cre"))
-Description: This package contains example data for the `sceptre` and `ondisc` packages. The example datasets are primarily single-cell CRISPR screen datasets stored in different formats.
+    c(person(given = "Timothy",
+            family = "Barry",
+            role = c("aut", "cre"),
+            email = "tbarry@hsph.harvard.edu",
+            comment=c(ORCID="0000-0002-4356-627X")),
+      person(given = "Eugene",
+             family = "Katsevich",
+             role = c("aut"),
+             email = "ekatsevi@wharton.upenn.edu")
+             )
+Description: This package contains example single-cell CRISPR screen data. The data primarily are intended for use in the examples and vignettes of the `sceptre` and `ondisc` Bioconductor packages. The example datasets include a high multiplicity-of-infection CRISPRi screen of enhancers and a low multiplicity-of-infection CRISPRko screen of gene transcription start sites.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
+biocViews: SequencingData, SingleCellData
+URL: https://timothy-barry.github.io/sceptre-book/, https://github.com/Katsevich-Lab/sceptre
+BugReports: https://github.com/Katsevich-Lab/sceptre/issues
 Depends: 
     R (>= 4.1)
+Suggests:
+  Matrix
