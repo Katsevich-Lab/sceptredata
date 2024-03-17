@@ -16,8 +16,8 @@ The example low MOI data are taken from the paper "Characterizing the molecular 
 \details{
 The example data are stored in a list containing four components:
 \itemize{
-\item \code{response_matrix}: a gene-by-cell expression matrix
-\item \code{grna_matrix}: a gRNA-by-cell expression matrix
+\item \code{response_matrix}: the gene-by-cell expression matrix
+\item \code{grna_matrix}: the gRNA-by-cell expression matrix
 \item \code{grna_target_data_frame}:  a data frame containing the columns \code{grna_id} (ID of an individual gRNA) and \code{grna_target} (genomic target of the gRNA)
 \item \code{extra_covariates}: a data frame with a single column, \code{bio_rep}, specifying the biological replicate of each cell (\code{rep_1}, \code{rep_2}, or \code{rep_3})
 }

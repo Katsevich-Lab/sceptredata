@@ -23,4 +23,7 @@ BugReports: https://github.com/Katsevich-Lab/sceptre/issues
 Depends: 
     R (>= 4.1)
 Suggests:
-  Matrix
+  Matrix,
+  rmarkdown,
+  knitr
+VignetteBuilder: knitr

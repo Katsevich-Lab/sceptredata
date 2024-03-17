@@ -11,15 +11,15 @@ An object of class \code{list} of length 4.
 data(highmoi_example_data)
 }
 \description{
-The example high-MOI data are taken from the paper "A genome-wide framework for mapping gene regulation via cellular genetic screens" by Gasperini et al., 2019. The authors used a CRISPRi-based assay to target 5,000+ putative enhancers in a population of K562 cells. The authors additionally targeted 200+ gene transcription start sites (TSSs) and designed a library of 50 non-targeting gRNAs to serve as negative controls. The genes, gRNAs, and cells were downsampled for inclusion in the example data.
+The example high-MOI CRISPRi data are taken from the paper "A genome-wide framework for mapping gene regulation via cellular genetic screens" by Gasperini et al., 2019. The authors used a CRISPRi-based assay to target 5,000+ putative enhancers in a population of K562 cells. The authors additionally targeted 200+ gene transcription start sites (TSSs) and designed a library of 100 non-targeting gRNAs to serve as negative controls. The genes, gRNAs, and cells are downsampled for inclusion in the example data.
 }
 \details{
-The example data are stored in a list containing five components:
+The example data are stored in a list containing the following components:
 \itemize{
-\item \code{response_matrix}: a gene-by-cell expression matrix
-\item \code{grna_matrix}: a gRNA-by-cell expression matrix
-\item \code{extra_covariates}: a data frame with a single column, \code{batch}, specifying the sequencing batch of each cell (\code{batch_1} or \code{batch_2})
-\item \code{gene_names}: the human-readable "name" of each gene
+\item \code{response_matrix}: the gene-by-cell expression matrix
+\item \code{grna_matrix}: the gRNA-by-cell expression matrix
+\item \code{extra_covariates}: a data frame containing a single column, \code{batch}, specifying the batch in which each cell was sequenced (\code{batch_1} or \code{batch_2})
+\item \code{gene_names}: the human-readable name of each gene
 }
 }
 \keyword{datasets}
