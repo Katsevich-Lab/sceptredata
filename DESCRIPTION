@@ -25,5 +25,6 @@ Depends:
 Suggests:
   Matrix,
   rmarkdown,
-  knitr
+  knitr,
+  sessioninfo
 VignetteBuilder: knitr
