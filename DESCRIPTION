@@ -1,6 +1,6 @@
 Package: sceptredata
 Title: Example data for the `sceptre` and `ondisc` packages
-Version: 0.9.0
+Version: 0.99.0
 Authors@R: 
     c(person(given = "Timothy",
             family = "Barry",
